@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.esotericsoftware.spine.spine-csharp": {
-      "version": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-csharp/src#4.1",
+      "version": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-csharp/src",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7d02748622e895eaa0bbee1dcef53ccdf611caa8"
+      "hash": "1c55537fb8e36c18d6becf7d6eb45e6d9ddb237d"
     },
     "com.esotericsoftware.spine.spine-unity": {
       "version": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-unity/Assets/Spine#4.1",
