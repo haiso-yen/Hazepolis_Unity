@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             TakeDamage(0.015f);
         }
         //ÀH®É¶¡¦^´_
-        if (!Input.GetKey(KeyCode.E))
+        if (currentHealth <= MaxHealth)
         {
             RecoverDamage(0.001f);
             StartCoroutine(Coroutine());
