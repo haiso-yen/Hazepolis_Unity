@@ -17,7 +17,7 @@ public class QuestUI : MonoBehaviour
     public QuestNameButton questNameButton;
 
     [Header("Text Content")]
-    public Text quesContentText;
+    public Text questContentText;
 
     [Header("Requirement")]
     public RectTransform requireTransform;
@@ -36,7 +36,7 @@ public class QuestUI : MonoBehaviour
         {
             isOpen = !isOpen;
             quesPanel.SetActive(isOpen);
-            //quesContentText.text = string.Empty;
+            //questContentText.text = string.Empty;
             //SetupQuestList();
         }
     }
@@ -56,34 +56,34 @@ public class QuestUI : MonoBehaviour
             Destroy(item.gameObject);
         }
 
-        ////遍歷列表中的list，接取任務
-        //foreach (var task in QuestManager.Instance.tasks)
-        //{
-        //    var newTask = Instantiate(questNameButton, questListTransform);
-        //    newTask.SetupNameButton(task.questData);
-        //    //newTask.questContentText = quesContentText;
-        //}
+        //遍歷列表中的list，接取任務
+        foreach (var task in QuestManager.Instance.tasks)
+        {
+            var newTask = Instantiate(questNameButton, questListTransform);
+            newTask.SetupNameButton(task.questData);
+            //newTask.questContentText = questContentText;
+        }
 
 
     }
 
     public void SetupRequireList(Quest questData)
     {
-        quesContentText.text = questData.Description;
+        questContentText.text = questData.Description;
         //將涉及到QuestNameButton中的三處questContentText關閉，不使用在裡面傳東西然後賦值的形式了，改為在此處直接修改
 
         foreach (Transform item in requireTransform)
         {
             Destroy(item.gameObject);
         }
-        //foreach (var require in questData.questRequires)
-        //{
-        //    var q = Instantiate(requirement, requireTransform);
-        //    if (questData.Completed)
-        //        q.SetupRequirement(require.name, true);
-        //    else
-        //        q.SetupRequirement(require.name, require.requireAmount, require.currentAmount);
-        //}
+        foreach (var require in questData.questRequires)
+        {
+            var q = Instantiate(requirement, requireTransform);
+            if (questData.Completed)
+                q.SetupRequirement(require.name, true);
+            else
+                q.SetupRequirement(require.name, require.requireAmount, require.currentAmount);
+        }
     }
 
     public void SetupRewardItem(Item item)

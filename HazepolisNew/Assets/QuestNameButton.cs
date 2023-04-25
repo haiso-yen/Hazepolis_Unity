@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class QuestNameButton : MonoBehaviour
 {
     public Text questNameText;
+    //public Text questContentText;
     public Quest currentData;
 
     public void SetupNameButton(Quest quesData)
     {
-        Debug.Log("SetupNameButton assigned");
-
         currentData = quesData;
 
         if (quesData.Completed)
@@ -20,15 +19,13 @@ public class QuestNameButton : MonoBehaviour
             questNameText.text = quesData.QuestName;
     }
 
-
     private void Awake()
     {
         GetComponent<Button>().onClick.AddListener(UpdateQuestContent);
     }
     void UpdateQuestContent()
     {
-        Debug.Log("button assigned");
-
+        Debug.Log("任務更新");
         //questContentText.text = currentData.Description;
         QuestUI.Instance.SetupRequireList(currentData);
 
@@ -36,6 +33,7 @@ public class QuestNameButton : MonoBehaviour
         {
             Destroy(item.gameObject);
         }
+
 
         foreach (var item in currentData.rewards)//獎勵可能不止一個所以需要循環列表
         {

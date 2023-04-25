@@ -10,6 +10,8 @@ public class InventoryController : MonoBehaviour
     public InventoryUIDetails inventoryUIDetailsPanel;
     public List<Item> playerItems = new List<Item>();
 
+    public InventoryUIItem inventoryData;
+
     private void Start()
     {
         if (Instance != null && Instance != this)
@@ -49,4 +51,18 @@ public class InventoryController : MonoBehaviour
     {
         consumableController.ConsumeItem(itemToconsume);
     }
+
+    //#region 檢測任務物品
+    //public void CheckQuestItemInBag(string questItemName)
+    //{
+    //    foreach (var item in inventoryData)
+    //    {
+    //        if (item.itemData != null)
+    //        {
+    //            if (item.itemData.itemName == questItemName)
+    //                QuestManager.Instance.UpdateQuestProgress(item.itemData.itemName, item.amount);
+    //        }
+    //    }
+    //}
+    //#endregion
 }

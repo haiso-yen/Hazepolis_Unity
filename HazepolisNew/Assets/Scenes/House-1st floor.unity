@@ -1002,6 +1002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShiningSpot
       objectReference: {fileID: 0}
+    - target: {fileID: 2919287984310615949, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2919287984310615950, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
       propertyPath: m_Size.x
       value: 3.4360037
@@ -1021,7 +1025,7 @@ PrefabInstance:
     - target: {fileID: 2919287984310615951, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
       propertyPath: DialogUI
       value: 
-      objectReference: {fileID: 5940416502672471788}
+      objectReference: {fileID: 1484270057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
 --- !u!1 &609883669
@@ -2665,6 +2669,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1484270057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2919287984435191102, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
+  m_PrefabInstance: {fileID: 587810749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1487405014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3461,6 +3470,10 @@ PrefabInstance:
       value: TestNPC
       objectReference: {fileID: 0}
     - target: {fileID: 5657896760050597750, guid: 8a6ce53f5d9b8dd48b2b58e43fbe8ac2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657896760050597750, guid: 8a6ce53f5d9b8dd48b2b58e43fbe8ac2, type: 3}
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
@@ -3515,11 +3528,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5657896760050597750, guid: 8a6ce53f5d9b8dd48b2b58e43fbe8ac2, type: 3}
   m_PrefabInstance: {fileID: 1715718954}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1715718956 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5084864336495548866, guid: 8a6ce53f5d9b8dd48b2b58e43fbe8ac2, type: 3}
-  m_PrefabInstance: {fileID: 1715718954}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1715718957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3532,10 +3540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982caefc1ee9a3f46a3af785eb62f4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: []
-  name: 
-  quests: {fileID: 42784144}
-  questType: Coffeeholic
+  startDialogue: {fileID: 0}
+  progressDialogue: {fileID: 0}
+  completeDialogue: {fileID: 0}
+  finishDialogue: {fileID: 0}
 --- !u!114 &1715718958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3582,8 +3590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20c69299eef90d41bbe531eae4ba8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: {fileID: 1715718956}
   DialogUI: {fileID: 0}
+  currentData: {fileID: 0}
 --- !u!61 &1715718961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3798,6 +3806,11 @@ Transform:
   m_Father: {fileID: 1723664619}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1922636793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2919287984435191102, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
+  m_PrefabInstance: {fileID: 4873023908629648616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1950846574
 GameObject:
   m_ObjectHideFlags: 0
@@ -6504,6 +6517,14 @@ PrefabInstance:
       propertyPath: itemSlug
       value: coffee_log
       objectReference: {fileID: 0}
+    - target: {fileID: 2919287984310615948, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919287984310615948, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: "(......\u70BA\u751A\u9EBC\u6703\u6709\u7F50\u88DD\u5496\u5561"
+      objectReference: {fileID: 0}
     - target: {fileID: 2919287984310615949, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
       propertyPath: m_Name
       value: ShiningSpot (1)
@@ -6511,7 +6532,11 @@ PrefabInstance:
     - target: {fileID: 2919287984310615951, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
       propertyPath: DialogUI
       value: 
-      objectReference: {fileID: 5940416502672471788}
+      objectReference: {fileID: 1922636793}
+    - target: {fileID: 2919287984310615951, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
 --- !u!222 &4886609187903774824
@@ -15647,11 +15672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questNameText: {fileID: 2272666144131750652}
-  questBtnName: {fileID: 5397017486825162813}
   currentData: {fileID: 11400000, guid: 045ac8b46098f614793729306a503de9, type: 2}
-  questContentText: {fileID: 747710488464675773}
-  questRequirement: {fileID: 7535631541620745241}
-  questReward: {fileID: 768830481700278660}
 --- !u!224 &7178667535363809821
 RectTransform:
   m_ObjectHideFlags: 0

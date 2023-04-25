@@ -10,16 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce02ce448acb97648a1e08c89bdfa71d, type: 3}
-  m_Name: New Dialogue
+  m_Name: 3
   m_EditorClassIdentifier: 
-  dialoguePieces:
-  - ID: matt
-    text: "\u9700\u8981\u5496\u5561"
-    quest: {fileID: 11400000, guid: 045ac8b46098f614793729306a503de9, type: 2}
-    options:
-    - text: "\u85E5"
-      targetID: 0
-      takeQuest: 1
-    - text: "\u4E0D\u8981"
-      targetID: 1
-      takeQuest: 0
+  dialoguePieces: []
