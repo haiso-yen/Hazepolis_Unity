@@ -6,21 +6,20 @@ using UnityEngine.UI;
 public class QuestNameButton : MonoBehaviour
 {
     public Text questNameText;
-    public Text questBtnName;
-    public QuestData_SO currentData;
-    public Text questContentText;
-    public Text questRequirement;
-    public Text questReward;
+    public Quest currentData;
 
-    public void SetupNameButton(QuestData_SO quesData)
+    public void SetupNameButton(Quest quesData)
     {
+        Debug.Log("SetupNameButton assigned");
+
         currentData = quesData;
 
-        if (quesData.isComplete)
-            questNameText.text = quesData.questName + "(完成)";
+        if (quesData.Completed)
+            questNameText.text = quesData.QuestName + "(完成)";
         else
-            questNameText.text = quesData.questName;
+            questNameText.text = quesData.QuestName;
     }
+
 
     private void Awake()
     {
@@ -28,22 +27,19 @@ public class QuestNameButton : MonoBehaviour
     }
     void UpdateQuestContent()
     {
-        questContentText.text = currentData.description;
-        questNameText.text = currentData.questName;
-        questBtnName.text = currentData.questBtnName;
-        questReward.text = currentData.reward;
-        questRequirement.text = currentData.require;
-        //QuestUI.Instance.SetupRequireList(currentData);
+        Debug.Log("button assigned");
 
-        //foreach (Transform item in QuestUI.Instance.rewardTransform)
-        //{
-        //    Destroy(item.gameObject);
-        //}
+        //questContentText.text = currentData.Description;
+        QuestUI.Instance.SetupRequireList(currentData);
 
+        foreach (Transform item in QuestUI.Instance.rewardTransform)
+        {
+            Destroy(item.gameObject);
+        }
 
-        //foreach (var item in currentData.rewards)//獎勵可能不止一個所以需要循環列表
-        //{
-        //    QuestUI.Instance.SetupRewardItem(item.itemData, item.amount);
-        //}
+        foreach (var item in currentData.rewards)//獎勵可能不止一個所以需要循環列表
+        {
+            QuestUI.Instance.SetupRewardItem(item.item);
+        }
     }
 }

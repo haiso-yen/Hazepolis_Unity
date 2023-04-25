@@ -24,29 +24,29 @@ public class Quest : MonoBehaviour
             InventoryController.Instance.GiveItem(ItemReward);
     }
 
-    //public class QuestTask
-    //{
-    //    //任務狀態查詢
-    //    public QuestData_SO questData;
-    //    public bool IsStarted
-    //    {
-    //        get { return questData.isStarted; }
-    //        set { questData.isStarted = value; }
-    //    }
+    public class QuestTask
+    {
+        //任務狀態查詢
+        public QuestData_SO questData;
+        public bool IsStarted
+        {
+            get { return questData.isStarted; }
+            set { questData.isStarted = value; }
+        }
 
-    //    public bool IsComplete
-    //    {
-    //        get { return questData.isComplete; }
-    //        set { questData.isComplete = value; }
-    //    }
+        public bool IsComplete
+        {
+            get { return questData.isComplete; }
+            set { questData.isComplete = value; }
+        }
 
-    //    public bool IsFinished
-    //    {
-    //        get { return questData.isFinished; }
-    //        set { questData.isFinished = value; }
-    //    }
+        public bool IsFinished
+        {
+            get { return questData.isFinished; }
+            set { questData.isFinished = value; }
+        }
 
-    //}
+    }
 
 
 

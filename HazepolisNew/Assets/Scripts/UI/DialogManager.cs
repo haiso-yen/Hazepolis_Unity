@@ -25,7 +25,7 @@ public class DialogManager : MonoBehaviour
         Debug.Log("Started coversation! Loaded messages: " + messages.Length);
         DisplayMessage();
 
-        //UI動畫
+        //UI
         backgroundBox.LeanScale(Vector3.one, 0.3f).setEaseInOutExpo();
     }
 
@@ -51,13 +51,12 @@ public class DialogManager : MonoBehaviour
         else
         {
             Debug.Log("ConversationEnded");
-            //關閉動畫
+            
             backgroundBox.LeanScale(Vector3.zero, 0.3f).setEaseInOutExpo();
             isActive = false;
         }
     }
 
-    //字符淡入動畫
     void AnimateTextColor()
     {
         LeanTween.textAlpha(messageText.rectTransform, 0, 0);
@@ -66,7 +65,6 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
-        //對話框關閉動畫
         backgroundBox.transform.localScale = Vector3.zero;
     }
 

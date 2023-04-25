@@ -26,10 +26,8 @@ namespace Inventory.UI
         [field: SerializeField]
         public  Sprite ItemImage { get; set; }
 
-        private int GetInstanceID()
-        {
-            throw new NotImplementedException();
-        }
     }
+
+
 }
 
