@@ -664,8 +664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20c69299eef90d41bbe531eae4ba8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: {fileID: 1036572947}
   DialogUI: {fileID: 0}
+  currentData: {fileID: 0}
 --- !u!114 &482281428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,10 +738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982caefc1ee9a3f46a3af785eb62f4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: []
-  name: 
-  quests: {fileID: 191988020}
-  questType: Coffeeholic
+  startDialogue: {fileID: 0}
+  progressDialogue: {fileID: 0}
+  completeDialogue: {fileID: 0}
+  finishDialogue: {fileID: 0}
 --- !u!1 &499813330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,7 +1788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955078860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00000011920929, y: 23.340002, z: -10}
+  m_LocalPosition: {x: -0.00000017881393, y: 23.340002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 341191365}
@@ -1807,11 +1807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bd48f74bafdaa4d9f6dee7e5cad76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1036572947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5084864336495548866, guid: 8a6ce53f5d9b8dd48b2b58e43fbe8ac2, type: 3}
-  m_PrefabInstance: {fileID: 1338243696}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1051319216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2199,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1444815315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2919287984435191102, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
+  m_PrefabInstance: {fileID: 2081835913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467394970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3666,7 +3666,7 @@ PrefabInstance:
     - target: {fileID: 2919287984310615951, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
       propertyPath: DialogUI
       value: 
-      objectReference: {fileID: 2881657998794321828}
+      objectReference: {fileID: 1444815315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465b8e34f667e164fbbd20f73723390a, type: 3}
 --- !u!1 &2112517639
@@ -4243,11 +4243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questNameText: {fileID: 7640088669061301172}
-  questBtnName: {fileID: 4569784953162453365}
-  currentData: {fileID: 11400000, guid: 045ac8b46098f614793729306a503de9, type: 2}
   questContentText: {fileID: 9218106755079211765}
-  questRequirement: {fileID: 2098357526074359121}
-  questReward: {fileID: 9162083904463145164}
+  questrequirement: {fileID: 0}
+  currentData: {fileID: 11400000, guid: 045ac8b46098f614793729306a503de9, type: 2}
 --- !u!224 &1502307234416611815
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4540,6 +4538,10 @@ PrefabInstance:
     - target: {fileID: 6043959391128780391, guid: 51db9664f3a431b42a02b931ee93a0ce, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782441472941683396, guid: 51db9664f3a431b42a02b931ee93a0ce, type: 3}
+      propertyPath: walkForce
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51db9664f3a431b42a02b931ee93a0ce, type: 3}

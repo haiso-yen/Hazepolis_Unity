@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class QuestNameButton : MonoBehaviour
 {
     public Text questNameText;
-    //public Text questContentText;
+    public Text questContentText;
+    public Text questrequirement;
     public Quest currentData;
 
     public void SetupNameButton(Quest quesData)
@@ -26,18 +27,19 @@ public class QuestNameButton : MonoBehaviour
     void UpdateQuestContent()
     {
         Debug.Log("任務更新");
-        //questContentText.text = currentData.Description;
-        QuestUI.Instance.SetupRequireList(currentData);
+        questContentText.text = currentData.Description;
+        questrequirement.text = currentData.goalname;
+        //QuestUI.Instance.SetupRequireList(currentData);
 
-        foreach (Transform item in QuestUI.Instance.rewardTransform)
-        {
-            Destroy(item.gameObject);
-        }
+        //foreach (Transform item in QuestUI.Instance.rewardTransform)
+        //{
+        //    Destroy(item.gameObject);
+        //}
 
 
-        foreach (var item in currentData.rewards)//獎勵可能不止一個所以需要循環列表
-        {
-            QuestUI.Instance.SetupRewardItem(item.item);
-        }
+        //foreach (var item in currentData.rewards)//獎勵可能不止一個所以需要循環列表
+        //{
+        //    QuestUI.Instance.SetupRewardItem(item.item);
+        //}
     }
 }

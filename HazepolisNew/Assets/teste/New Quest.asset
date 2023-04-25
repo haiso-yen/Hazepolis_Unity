@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf076eda2935c940a071da034d86570, type: 3}
   m_Name: New Quest
   m_EditorClassIdentifier: 
-  QuestName: eqeqwe
-  Description: dddddddddddddddd
+  QuestName: "\u7121\u5496\u5561\u4E0D\u751F"
+  Description: "\u4F60\u6709\u6C92\u6709\u591A\u7684\u5496\u5561\u53EF\u4EE5\u5206\u6211\u559D.......\n\u54B3\u54B3......"
+  goalname: "\u7F50\u88DD\u5496\u5561\u4E00\u676F"
   isStarted: 0
   Completed: 0
   isFinished: 0
-  questRequires: []
-  rewards: []
+  questRequires:
+  - name: coffee_log
+    requireAmount: 1
+    currentAmount: 0
+  rewards:
+  - {fileID: 0}

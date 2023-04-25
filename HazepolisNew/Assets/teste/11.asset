@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce02ce448acb97648a1e08c89bdfa71d, type: 3}
-  m_Name: key
+  m_Name: 11
   m_EditorClassIdentifier: 
   dialoguePieces:
-  - ID: 
-    text: "(\u62CD\u958B\u7070\u5875\u8DDF\u6728\u5C51)"
+  - ID: 1100
+    text: 5555555555555
     quest: {fileID: 0}
-    options: []
-  - ID: 
-    text: 
-    quest: {fileID: 0}
-    options: []
-  - ID: 
-    text: 
+    options:
+    - text: 57747474
+      targetID: 1101
+      takeQuest: 0
+  - ID: 1101
+    text: 66666666666
     quest: {fileID: 0}
     options: []

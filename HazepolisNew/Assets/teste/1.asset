@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   dialoguePieces:
-  - ID: dialoguePieces01
+  - ID: 0100
     text: shrhshth
     quest: {fileID: 0}
     options:
@@ -21,12 +21,12 @@ MonoBehaviour:
       targetID: 
       takeQuest: 0
     - text: 111111
-      targetID: dialoguePieces02
+      targetID: 0101
       takeQuest: 0
-  - ID: dialoguePieces02
+  - ID: 0101
     text: rjjjjjjjjjjjjjjjj
     quest: {fileID: 11400000, guid: ed1912c1e4945b649a8731506ba8a8f7, type: 2}
     options:
-    - text: 333333333333
+    - text: 0
       targetID: 
       takeQuest: 1

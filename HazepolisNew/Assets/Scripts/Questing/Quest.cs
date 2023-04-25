@@ -62,6 +62,8 @@ public class Quest : ScriptableObject
     public string QuestName;
     [TextArea]
     public string Description;
+    [TextArea]
+    public string goalname;
 
     //需要三種任務完成的狀態，npc才會有不同的反應
     public bool isStarted;
