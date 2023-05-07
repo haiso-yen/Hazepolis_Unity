@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(TalkButton))]
+[RequireComponent(typeof(TalkButton_story))]
 public class QuestGiver : MonoBehaviour
 {
-    TalkButton controller;
+    TalkButton_story controller;
     Quest currentQuest;
 
     public DialougeData_SO startDialogue;
@@ -15,7 +15,7 @@ public class QuestGiver : MonoBehaviour
 
     private void Awake()
     {
-        controller = GetComponent<TalkButton>();
+        controller = GetComponent<TalkButton_story>();
     }
 
     #region 獲得任務狀態
