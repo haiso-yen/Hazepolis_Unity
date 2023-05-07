@@ -32,7 +32,7 @@ public class TalkButton_story : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))//TODO:此處是否可以改編成使用事件的形式？
+        if (canTalk && Input.GetKeyDown(KeyCode.T))//TODO:此處是否可以改編成使用事件的形式？
         {
             //if (this.tag == "Interactable")
             //{
