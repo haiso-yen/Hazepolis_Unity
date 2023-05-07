@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TalkButton_story : MonoBehaviour
 {
-    //public GameObject Button;
     public GameObject DialogHint;
 
     public DialougeData_SO currentData;
@@ -35,10 +34,10 @@ public class TalkButton_story : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))//TODO:此處是否可以改編成使用事件的形式？
         {
-            //if (this.tag == "Interactable")
-            //{
-            //    this.GetComponent<Interactable>().Interact();
-            //}
+            if (this.tag == "Interactable")
+            {
+                this.GetComponent<Interactable>().Interact();
+            }
             OpenDialogue();
         }
     }
