@@ -6,12 +6,14 @@ using DG.Tweening;
 
 public class Menuanimation : MonoBehaviour
 {
-    public RectTransform TitlePanel,Titlechoice,settingBanner,settingPanel, panelSwitchD,panelSwitchA;
+    public RectTransform TitlePanel,Titlechoice1, Titlechoice2, Titlechoice3, settingBanner,settingPanel, panelSwitchD,panelSwitchA;
 
     void Start()
     {
         TitlePanel.DOAnchorPos(new Vector2(-110, -30), 0.25f);
-        Titlechoice.DOAnchorPos(new Vector2(-400, -300), 0.25f);
+        Titlechoice1.DOAnchorPos(new Vector2(-400, -300), 0.25f);
+        Titlechoice2.DOAnchorPos(new Vector2(-400, -275), 0.35f);
+        Titlechoice3.DOAnchorPos(new Vector2(-400, -330), 0.45f);
 
         settingPanel.DOAnchorPos(new Vector2(0, -308), 0.25f);
         settingBanner.DOAnchorPos(new Vector2(0, 85), 0.25f);
@@ -20,7 +22,9 @@ public class Menuanimation : MonoBehaviour
     public void Titledissapear()
     {
         TitlePanel.DOAnchorPos(new Vector2(-500,-30), 0.25f);
-        Titlechoice.DOAnchorPos(new Vector2(-650, -300), 0.25f);
+        Titlechoice1.DOAnchorPos(new Vector2(-650, -300), 0.25f);
+        Titlechoice2.DOAnchorPos(new Vector2(-650, -275), 0.35f);
+        Titlechoice3.DOAnchorPos(new Vector2(-650, -330), 0.45f);
 
         settingBanner.DOAnchorPos(new Vector2(0, 3), 0.25f);
         settingPanel.DOAnchorPos(new Vector2(0, -20), 0.2f);
@@ -29,10 +33,12 @@ public class Menuanimation : MonoBehaviour
     public void Titleappear()
     {
         TitlePanel.DOAnchorPos(new Vector2(-110, -30), 0.25f);
-        Titlechoice.DOAnchorPos(new Vector2(-400, -300), 0.25f);
+        Titlechoice1.DOAnchorPos(new Vector2(-400, -300), 0.25f);
+        Titlechoice2.DOAnchorPos(new Vector2(-400, -275), 0.35f);
+        Titlechoice3.DOAnchorPos(new Vector2(-400, -330), 0.45f);
 
         settingBanner.DOAnchorPos(new Vector2(0, 85), 0.25f);
         settingPanel.DOAnchorPos(new Vector2(0, -308), 0.2f);
-        panelSwitchD.DOAnchorPos(new Vector2(-386, -165), 0.25f);
+        panelSwitchD.DOAnchorPos(new Vector2(-450, -165), 0.25f);
     }
 }
