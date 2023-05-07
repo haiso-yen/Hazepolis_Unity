@@ -19,72 +19,72 @@ public class QuestGiver : MonoBehaviour
     }
 
     #region 獲得任務狀態
-    public bool isStarted
-    {
-        get
-        {
-            Debug.Log("任務開始");
+    //public bool isStarted
+    //{
+    //    get
+    //    {
+    //        Debug.Log("任務開始");
 
-            if (QuestManager.Instance.HaveQuest(currentQuest))
-            {
-                return QuestManager.Instance.GetTask(currentQuest).IsStarted;
-            }
-            else return false;
-        }
-    }
+    //        if (QuestManager.Instance.HaveQuest(currentQuest))
+    //        {
+    //            return QuestManager.Instance.GetTask(currentQuest).IsStarted;
+    //        }
+    //        else return false;
+    //    }
+    //}
 
-    public bool Completed
-    {
-        get
-        {
-            if (QuestManager.Instance.HaveQuest(currentQuest))
-            {
-                return QuestManager.Instance.GetTask(currentQuest).Completed;
-            }
-            else return false;
-        }
-    }
+    //public bool Completed
+    //{
+    //    get
+    //    {
+    //        if (QuestManager.Instance.HaveQuest(currentQuest))
+    //        {
+    //            return QuestManager.Instance.GetTask(currentQuest).Completed;
+    //        }
+    //        else return false;
+    //    }
+    //}
 
-    public bool isFinished
-    {
-        get
-        {
-            if (QuestManager.Instance.HaveQuest(currentQuest))
-            {
-                return QuestManager.Instance.GetTask(currentQuest).IsFinished;
-            }
-            else return false;
-        }
+    //public bool isFinished
+    //{
+    //    get
+    //    {
+    //        if (QuestManager.Instance.HaveQuest(currentQuest))
+    //        {
+    //            return QuestManager.Instance.GetTask(currentQuest).IsFinished;
+    //        }
+    //        else return false;
+    //    }
     }
     #endregion
 
-    private void Start()
-    {
-        controller.currentData = startDialogue;
-        currentQuest = controller.currentData.GetQuest();
-    }
+//    private void Start()
+//    {
+//        controller.currentData = startDialogue;
+//        currentQuest = controller.currentData.GetQuest();
+//    }
 
-    //根據狀態切換對話
-    void Update()
-    {
-        //if (isStarted)
-        //{
-        //    if (Completed)
-        //    {
-        //        controller.currentData = completeDialogue;
-        //    }
-        //    else
-        //    {
-        //        controller.currentData = progressDialogue;
-        //    }
-        //}
+//    //根據狀態切換對話
+//    void Update()
+//    {
+//        if (isStarted)
+//        {
+//            if (Completed)
+//            {
+//                controller.currentData = completeDialogue;
+//            }
+//            else
+//            {
+//                controller.currentData = progressDialogue;
+//            }
+//        }
 
-        //if (isFinished)
-        //{
-        //    controller.currentData = finishDialogue;
-        //}
-    }
-}
+//        if (isFinished)
+//        {
+//            controller.currentData = finishDialogue;
+//        }
+//    }
+//}
 //public class QuestGiver : NPC
 //{
 //    public bool AssignedQuest { get; set; }

@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePieces:
   - ID: 0100
-    text: shrhshth
+    text: "\u80FD\u5E6B\u6211\u627E\u676F\u5496\u5561\u55CE......"
     quest: {fileID: 0}
     options:
-    - text: 00000
+    - text: "\u6211\u624D\u4E0D\u8981"
       targetID: 
       takeQuest: 0
-    - text: 111111
+    - text: "\u8209\u624B\u4E4B\u52DE"
       targetID: 0101
       takeQuest: 0
   - ID: 0101
-    text: rjjjjjjjjjjjjjjjj
+    text: "\u771F\u7684\u55CE\uFF1F\uFF01\u592A\u611F\u8B1D\u4F60\u4E86"
     quest: {fileID: 11400000, guid: ed1912c1e4945b649a8731506ba8a8f7, type: 2}
     options:
-    - text: 0
+    - text: "\u4E0D\u5BA2\u6C23"
       targetID: 
       takeQuest: 1

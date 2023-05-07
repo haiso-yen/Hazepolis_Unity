@@ -29,7 +29,7 @@ public class QuestNameButton : MonoBehaviour
         Debug.Log("任務更新");
         questContentText.text = currentData.Description;
         questrequirement.text = currentData.goalname;
-        //QuestUI.Instance.SetupRequireList(currentData);
+        QuestUI.Instance.SetupRequireList(currentData);
 
         //foreach (Transform item in QuestUI.Instance.rewardTransform)
         //{

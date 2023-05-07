@@ -7,7 +7,7 @@ using DG.Tweening;
 public class DialogueUI : Singleton<DialogueUI>
 {
     [Header("Basic Elements")]
-    public Image icon;
+    //public Image icon;
     public Text mainText;
     public Button nextButton;
 
@@ -49,13 +49,6 @@ public class DialogueUI : Singleton<DialogueUI>
     {
         dialoguePanel.SetActive(true);
         currentIndex++;
-
-        //if (piece.image != null)
-        //{
-        //    icon.enabled = true;
-        //    icon.sprite = piece.image;
-        //}
-        //else icon.enabled = false;
 
         mainText.text = "";
         //mainText.text = piece.text;

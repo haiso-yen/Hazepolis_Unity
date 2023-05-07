@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class TalkButton_story : MonoBehaviour
 {
     public GameObject DialogHint;
+    public RectTransform dialoguePanel;
 
     public DialougeData_SO currentData;
     bool canTalk = false;
+
 
     //靠近NpC顯示對話符號
     private void OnTriggerEnter2D(Collider2D other)
@@ -15,9 +18,9 @@ public class TalkButton_story : MonoBehaviour
         DialogHint.SetActive(true);
         if (other.CompareTag("Player") && currentData != null)
         {
+
             canTalk = true;
             Debug.Log("can talk is true");
-
         }
     }
 
@@ -45,7 +48,13 @@ public class TalkButton_story : MonoBehaviour
     {
         //打開UI面板
         //傳輸對話內容信息
+        dialogueapear();
         DialogueUI.Instance.UpdateDialogueData(currentData);
         DialogueUI.Instance.UpdateMainDialogue(currentData.dialoguePieces[0]);
+    }
+
+    public void dialogueapear()
+    {
+        dialoguePanel.DOAnchorPos(new Vector2(-49, -300), 0.25f);
     }
 }
