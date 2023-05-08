@@ -14,9 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePieces:
   - ID: 1201
-    text: 4444444444444
+    text: "(\u62CD\u958B\u7070\u5875\u8DDF\u6728\u5C51)"
     quest: {fileID: 0}
     options:
-    - text: 444
+    - text: next>>
+      targetID: 1202
+      takeQuest: 0
+  - ID: 1202
+    text: "\u4E00\u628A\u8001\u820A\u7684\u9470\u5319\uFF0C\u9084\u4E0D\u77E5\u9053\u7528\u9014"
+    quest: {fileID: 0}
+    options:
+    - text: next>>
+      targetID: 1203
+      takeQuest: 0
+  - ID: 1203
+    text: "\u5148\u6536\u8457\u597D\u4E86"
+    quest: {fileID: 0}
+    options:
+    - text: "(\u6536\u8D77\u9470\u5319)"
       targetID: 
       takeQuest: 0
