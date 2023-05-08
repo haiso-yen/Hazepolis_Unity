@@ -1,0 +1,6 @@
+skeleton.png
+size:29,27
+filter:Linear,Linear
+pma:true
+水滴
+bounds:0,0,29,27

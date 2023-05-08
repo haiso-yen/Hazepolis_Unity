@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2021971824533700624}
   - component: {fileID: 2103478465079814455}
   - component: {fileID: 2021971824533700638}
-  - component: {fileID: 2021971824533700625}
+  - component: {fileID: 198613938}
   m_Layer: 8
   m_Name: bridge
   m_TagString: Bridge
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2021971824533700628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 43.86, y: -13.92, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7297969, y: 1.7297969, z: 1.7297969}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1472004553
-  m_SortingLayer: 2
+  m_SortingLayerID: -1329328813
+  m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3f5b547aff8485e40880eadbf33a1329, type: 3}
+  m_Sprite: {fileID: -6412229219757178395, guid: 761052df43ed22347b63da72c8e1a5d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,19 +152,18 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -19.1352, y: 8.576095}
-  - {x: -19.1352, y: 8.576095}
-  - {x: -9.992012, y: 6.9005284}
-  - {x: -4.8238373, y: 6.5034986}
-  - {x: 0.66228867, y: 6.4707794}
-  - {x: 4.827755, y: 6.5550957}
-  - {x: 10.457058, y: 7.109926}
-  - {x: 20.163857, y: 8.28732}
+  - {x: 13.354825, y: 3.6262586}
+  - {x: 9.681779, y: 3.459619}
+  - {x: 7.5810037, y: 3.359529}
+  - {x: 2.9514554, y: 3.2175078}
+  - {x: -3.325803, y: 3.1817381}
+  - {x: -7.1508408, y: 3.3457832}
+  - {x: -13.725273, y: 3.7872798}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!61 &2021971824533700625
+--- !u!61 &198613938
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,19 +173,19 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.089650154, y: 18.377033}
+  m_Offset: {x: -0.035284042, y: 1.3817501}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40.9, y: 22.107569}
+    oldSize: {x: 28.70604, y: 10.12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 38.389717, y: 29.329033}
+  m_Size: {x: 27.723175, y: 12.883499}
   m_EdgeRadius: 0
