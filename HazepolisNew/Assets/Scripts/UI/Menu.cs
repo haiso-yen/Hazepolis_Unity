@@ -51,6 +51,11 @@ public class Menu : MonoBehaviour
         // 如果想要在編輯狀態下關閉執行的話要使用到EditorApplication.isPlaying這個參數
     }
 
+    public void BackIntro()
+    {
+        SceneManager.LoadScene("Intro");
+    }
+
     public void UIEable()
     {
         GameObject.Find("Canvas/MainMenu/UI").SetActive(true);

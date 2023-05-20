@@ -56,8 +56,8 @@
     "objectSlug": "letter",
     "itemName": "委託信封",
     "description": "來自柯林先生的信：十分感謝您願意接受我們的委託，在青羽街307號碰面後，我們會付上足夠的委託尾款。隨信付上的是首款和一些糖果，戴納他十分的喜歡，應該可以起到一些作用，請務必安全地將我們的孩子帶回來。再次深深感謝您的幫助，靜候佳音  理查德．柯林上",
-    "itemType": "Quest",
-    "actionName": "開啟",
+    "itemType": "Consumable",
+    "actionName": "燒掉",
     "itemModifier": 0
   },
   {
@@ -80,16 +80,16 @@
     "itemName": "粉色絲巾",
     "description": "有些老舊的粉色絲巾，在經歷過太陽的曝曬與雨水的洗禮後有些褪色，然而其中的愛意不曾減少一絲。",
     "itemType": "Quest",
-    "actionName": "把玩",
+    "actionName": "收起",
     "itemModifier": 0
   },
   {
   
     "objectSlug": "sun_and_moon",
-    "itemName": "《從前從前：三歲小孩也能讀懂的神話故事書》",
+    "itemName": "《從前從前》",
     "description": "「將傳統神話故事以互動式童話書重新呈現，用最簡單有趣的方式幫助您的孩子了解神話故事！」\n「目錄：一、    二、    三、    ……」",
     "itemType": "Quest",
-    "actionName": "翻開",
+    "actionName": "放回包包",
     "itemModifier": 0
   }
 ]

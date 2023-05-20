@@ -6772,11 +6772,11 @@ PrefabInstance:
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 5756310119357985471, guid: 51db9664f3a431b42a02b931ee93a0ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150.6
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 5756310119357985471, guid: 51db9664f3a431b42a02b931ee93a0ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -81.2
+      value: -68.3
       objectReference: {fileID: 0}
     - target: {fileID: 5756310119357985471, guid: 51db9664f3a431b42a02b931ee93a0ce, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7438,6 +7438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 580182616}
   - component: {fileID: 580182615}
+  - component: {fileID: 580182617}
   m_Layer: 0
   m_Name: "\u8349\u5730(\u5DE6)(1)"
   m_TagString: Untagged
@@ -7510,6 +7511,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &580182617
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580182614}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6968498, y: 3.822112}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.790304, y: 9.38}
+    newSize: {x: 20.790304, y: 9.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.396606, y: 17.024225}
+  m_EdgeRadius: 0
 --- !u!114 &584867668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10184,7 +10211,6 @@ MonoBehaviour:
   MainPlayer:
   - {fileID: 1322828814}
   - {fileID: 387550295}
-  foundDan: 0
   threshold: 0.1
   iCharcaterCount: 0
   cam: {fileID: 1890297295}
@@ -23493,7 +23519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890297291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 150.37001, y: -77.42, z: -11.35}
+  m_LocalPosition: {x: -12.2300005, y: -64.520004, z: -11.35}
   m_LocalScale: {x: 1.0734, y: 1.0734, z: 1.0734}
   m_Children:
   - {fileID: 256584902}
@@ -24431,7 +24457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962299292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 150.37001, y: -77.42, z: -11.35}
+  m_LocalPosition: {x: -12.2300005, y: -64.520004, z: -11.35}
   m_LocalScale: {x: 1.0734, y: 1.0734, z: 1.0734}
   m_Children:
   - {fileID: 1039341260}
@@ -27790,6 +27816,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1270227430906841556, guid: 645fbae7065200740bc765d1da1e9428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270227430906841562, guid: 645fbae7065200740bc765d1da1e9428, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.37387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270227430906841562, guid: 645fbae7065200740bc765d1da1e9428, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.37387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270227430906841562, guid: 645fbae7065200740bc765d1da1e9428, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.37387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270227430906841562, guid: 645fbae7065200740bc765d1da1e9428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270227430906841562, guid: 645fbae7065200740bc765d1da1e9428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.99
+      objectReference: {fileID: 0}
     - target: {fileID: 1270227431048735590, guid: 645fbae7065200740bc765d1da1e9428, type: 3}
       propertyPath: dialogue.Array.data[3]
       value: .......
@@ -28878,7 +28928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5709138919729145195
 Transform:
   m_ObjectHideFlags: 0
