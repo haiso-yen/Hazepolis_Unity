@@ -6670,6 +6670,7 @@ GameObject:
   - component: {fileID: 1341217177}
   - component: {fileID: 1341217178}
   - component: {fileID: 1341217179}
+  - component: {fileID: 1341217180}
   m_Layer: 0
   m_Name: floorright
   m_TagString: Ground
@@ -6789,9 +6790,9 @@ EdgeCollider2D:
   - {x: 1.4941692, y: 3.1020246}
   - {x: 3.9548073, y: 1.3339026}
   - {x: 7.397811, y: 0.21338992}
-  - {x: 9.518882, y: -0.19059277}
-  - {x: 13.774099, y: -0.32792318}
-  - {x: 21.328737, y: -0.78092134}
+  - {x: 10.469206, y: -0.024662733}
+  - {x: 14.060708, y: 0.48664474}
+  - {x: 21.479586, y: 0.19957668}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -6809,7 +6810,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 19.845219, y: 4.249658}
+  m_Offset: {x: 23.26, y: 4.53}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6822,6 +6823,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 38.0113, y: 3.2040892}
   m_EdgeRadius: 0
+--- !u!68 &1341217180
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341217174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.46897733, y: 0.2058382}
+  - {x: 0.7707239, y: 5.7332606}
+  - {x: 4.7354326, y: 6.2181196}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1367683932
 GameObject:
   m_ObjectHideFlags: 0
@@ -10071,6 +10095,10 @@ PrefabInstance:
     - target: {fileID: 5647072391919240416, guid: 1a813e8a02f076f4384f00c160d7c960, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875346062175262728, guid: 1a813e8a02f076f4384f00c160d7c960, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 5875346062468963602, guid: 1a813e8a02f076f4384f00c160d7c960, type: 3}
       propertyPath: m_Pivot.x

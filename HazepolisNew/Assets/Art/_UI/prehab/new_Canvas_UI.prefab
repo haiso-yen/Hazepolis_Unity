@@ -12695,9 +12695,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5875346062468963602}
     m_Modifications:
+    - target: {fileID: 5486584993567953119, guid: 38e15654afdfd1e4c8a365b3be6316ec, type: 3}
+      propertyPath: m_Text
+      value: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\u9EDE\u64CA\u7E7C\u7E8C       "
+      objectReference: {fileID: 0}
     - target: {fileID: 5486584995399289897, guid: 38e15654afdfd1e4c8a365b3be6316ec, type: 3}
       propertyPath: m_Name
       value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486584995399289897, guid: 38e15654afdfd1e4c8a365b3be6316ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5486584995399289902, guid: 38e15654afdfd1e4c8a365b3be6316ec, type: 3}
       propertyPath: m_Pivot.x
