@@ -15,6 +15,17 @@ public class CharacterController2D : MonoBehaviour
 	public Camera cam;
 	public LayerMask mask;
 
+	[Range(0.0f, 100.0f)]
+	public float m_Damping = 0.1f;
+
+	[Range(0.0f, 100.0f)]
+	public float m_Frequency = 100.0f;
+
+	public bool m_DrawDragLine = true;
+	public Color m_Color = Color.cyan;
+
+	private TargetJoint2D m_TargetJoint;
+
 	void Update()
 	{
 		ChangeCharacter();
@@ -65,14 +76,13 @@ public class CharacterController2D : MonoBehaviour
 	{
 		int layerMask = 1 << LayerMask.NameToLayer("Interactive");
 		var worldPoint = GetMouseWorldPoint();
-		RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, layerMask);
-        //DegugDraw3Axis(worldPoint);
+		//RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, layerMask);
+		var collider = Physics2D.OverlapPoint(worldPoint, layerMask);
 
-		if (Input.GetKey(KeyCode.E) && hit.collider != null)
+		if (collider != null)
 		{
-			String activeObj = hit.transform.name;
+			String activeObj = collider.transform.name;
 			GameObject hitObj = GameObject.Find(activeObj);
-			//Debug.Log("hit.collider.name:" + hit.collider.name);
 
 			if (iCharcaterCount == 0)
 			{
@@ -83,7 +93,6 @@ public class CharacterController2D : MonoBehaviour
 
 					if (Mathf.Abs(scroll) >= threshold)
 					{
-						//Debug.Log(scroll);
 						currentPlayer.gameObject.SendMessage("MagicTimeReverseSpeedUp"); //跑動畫
 						hitObj.SendMessage("ControlTime", scroll); //傳至ObjectController
 					}
@@ -91,7 +100,7 @@ public class CharacterController2D : MonoBehaviour
 					//TimePause
 					if (Input.GetMouseButtonDown(1))
 					{
-						Debug.Log("hit.collider.name:" + hit.collider.name + "PauseTime");
+						Debug.Log("hit.collider.name:" + collider.name + "PauseTime");
 						currentPlayer.gameObject.SendMessage("MagicTimeStop"); //跑動畫
 						hitObj.SendMessage("PauseTime"); //傳至ObjectController
 					}
@@ -105,13 +114,49 @@ public class CharacterController2D : MonoBehaviour
 					if (Input.GetMouseButtonDown(0)) //跑動畫
 					{
 						currentPlayer.gameObject.SendMessage("Magic");
-						Debug.Log("hit.collider.name:" + hit.collider.name + "Drag");
+
+						// Fetch the first collider.
+						// NOTE: We could do this for multiple colliders.
+						//var collider = hitObj.GetComponent<Collider2D>();
+						if (!collider)
+							return;
+
+						// Fetch the collider body.
+						var body = collider.attachedRigidbody;
+						if (!body)
+							return;
+
+                        // Add a target joint to the Rigidbody2D GameObject.
+                        if (!m_TargetJoint)
+                        {
+							m_TargetJoint = hitObj.AddComponent<TargetJoint2D>();
+							m_TargetJoint.dampingRatio = m_Damping;
+							m_TargetJoint.frequency = 1000;
+						}
+						// Attach the anchor to the local-point where we clicked.
+						m_TargetJoint.anchor = m_TargetJoint.transform.InverseTransformPoint(worldPoint);
+
 					}
-					if (Input.GetMouseButton(0))
+					// Update the joint target.
+					if (m_TargetJoint)
 					{
-						StartCoroutine(Drag(hit.collider));
+						m_TargetJoint.target =  worldPoint;
+
+						// Draw the line between the target and the joint anchor.
+						if (m_DrawDragLine)
+							Debug.DrawLine(m_TargetJoint.transform.TransformPoint(m_TargetJoint.anchor), worldPoint, m_Color);
 					}
+					//if (Input.GetMouseButton(0))
+					//{
+					//	StartCoroutine(Drag(hit.collider));
+					//}
 				}
+			}
+			if (Input.GetMouseButtonUp(0))
+			{
+				Destroy(m_TargetJoint);
+				m_TargetJoint = null;
+				//return;
 			}
 		}
 		
