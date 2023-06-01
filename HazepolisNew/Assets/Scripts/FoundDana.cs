@@ -23,6 +23,10 @@ public class FoundDana : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                completeTalk = true;
+            }
             if (!su)
             {
                 skeletonAnimation.state.SetAnimation(0, "su", false);
