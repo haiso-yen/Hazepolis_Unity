@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenePassWord: 
   KeyPassword: 
-  walkForce: 100
+  walkForce: 122
   maxWalkForce: 6
   isClimbling: 0
   foundDan: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d2c4234ab3c904fa4c0418ae0378c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petObeject: {fileID: 4277595389830641470, guid: 1f2575b5feeea7540a192c102e242a77, type: 3}
+  petObeject: {fileID: 0}
   positionList: []
   distance: 20
 --- !u!82 &6508653890161544909

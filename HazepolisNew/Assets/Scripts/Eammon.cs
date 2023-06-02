@@ -217,10 +217,6 @@ public class Eammon : MonoBehaviour
     public void Activate()
     {
         inputEnabled = true;
-        //if(scenePassWord == "gate" && Input.GetKeyDown(KeyCode.F))
-        //{
-        //    foundDan = true;
-        //}
         if (foundDan)
         {
             gameObject.GetComponent<FollowingPlayer>().enabled = true;

@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
 {
     public GameObject cam1, cam2;
     bool camChange = true;
-    public bool foundDan = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +17,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (foundDan == false)
-        {
-            CheckMeet();
-        }
-        else
+        if (Eammon.instance.foundDan)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -41,11 +36,4 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    void CheckMeet()
-    {
-        if (Eammon.instance.scenePassWord == "Level0-1")
-        {
-            foundDan = true;
-        }
-    }
 }
